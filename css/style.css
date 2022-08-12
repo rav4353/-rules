@@ -1,0 +1,145 @@
+/* @media */
+
+/* important */
+#myid {
+    background-color: blue;
+  }
+  
+  .myclass {
+    background-color: gray;
+  }
+  
+  p {
+    background-color: red !important;
+  }
+  h1{
+  background-color: green;
+  }
+
+  /* @media  */
+
+    /* @font-face */
+
+
+    @font-face {
+        font-family: "Open Sans";
+        src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+             url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+      }
+
+      
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* @supports */
+  
+  @document url("https://www.example.com/") {
+    h1 {
+      color: green;
+    }
+  }
+
+
+  @color-profile --swop5c {
+    src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  }
+
+  
+  /* @page */
+
+  @page {
+    margin: 1cm;
+  }
+  
+  @page :first {
+    margin: 2cm;
+  }
+
+
+
+  /* @keyframes */
+
+  @keyframes slidein {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* @viewport */
+  @viewport {
+    width: 100vw; /*Sets the width of the actual viewport to the device width*/
+  }
+
+  @counter-style thumbs {
+    system: cyclic;
+    symbols: "\1F44D";
+    suffix: " ";
+  }
+  
+  ul {
+    list-style: thumbs;
+  }
+
+
+
+  @font-feature-values Font One {
+    @styleset {
+      nice-style: 12;
+    }
+  }
+  
+  /* At-rule for "nice-style" in Font Two */
+  @font-feature-values Font Two {
+    @styleset {
+      nice-style: 4;
+    }
+  }
+  
+  …
+  
+  /* Apply the at-rules with a single declaration */
+  .nice-look {
+    font-variant-alternates: styleset(nice-style);
+  }
+
+
+  @property --property-name {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #c0ffee;
+  }
+  
